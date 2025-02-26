@@ -197,13 +197,13 @@ section {
 }
 
 section#Servicos {
-    color: rgba(51, 51, 51, 0.8);
+    color: rgba(29, 28, 28, 0.8);
     background: linear-gradient(to bottom, rgba(207, 166, 103, 1), rgba(190, 140, 70, 0.9));
     padding: 40px 5%;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
-    text-align: right;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.534);
+    text-align: left;
 }
 
 #Servicos h2, 
@@ -245,7 +245,13 @@ footer {
     text-align: left;
     max-width: 50%;
 }
-
+.footer-text a{
+    text-decoration: none;
+    color: #f4a261;
+    &:hover{
+        color: #fa7203;
+    }
+}
 .footer-text h3 {
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -283,7 +289,7 @@ footer {
 /* Rodapé inferior */
 .footer-bottom {
     margin-top: 20px;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     text-align: center;
 }
 
