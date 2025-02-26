@@ -1,0 +1,301 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Arial', sans-serif;*/
+}
+
+/* Corpo da página */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho com vídeo */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#headerVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: lightgray;
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-family: "Roboto";
+    text-shadow: 1px 1px #222;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px #202020;
+    font-size: 1.5rem;
+    max-width: 600px;
+}
+
+/* Navbar */
+nav {
+    background-image: linear-gradient(to right, rgba(207, 166, 103, 1), rgb(209, 134, 30));
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo >img{
+    width: 7%;
+    align-self: left;
+    padding-right: 5px;
+}
+
+.nav-links {
+    font-family: "Roboto";
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d46001;
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+        
+    section > p {
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+    }
+    
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-text {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}
+
+/* Seções */
+main {
+    color: #333333bd;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: rgba(131, 131, 131, 0.144);
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section#Servicos {
+    color: rgba(51, 51, 51, 0.8);
+    background: linear-gradient(to bottom, rgba(207, 166, 103, 1), rgba(190, 140, 70, 0.9));
+    padding: 40px 5%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: right;
+}
+
+#Servicos h2, 
+#Servicos p {
+    color: rgba(51, 51, 51, 0.9);
+    margin-bottom: 15px;
+}
+section> h2{
+    color: #fa8220;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+section > p{
+    font-size: 1.3rem;
+    text-align: left;
+    width: 50vw;
+}
+/* Rodapé */
+footer {
+    font-family: "Roboto";
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Container principal do footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Estilo do texto (h3 + p) */
+.footer-text {
+    text-align: left;
+    max-width: 50%;
+}
+
+.footer-text h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.footer-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilização das redes sociais */
+.socials {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.socials li {
+    display: inline-block;
+}
+
+.socials a {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #f4a261;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-bottom span > a{
+    text-decoration: none;
+    color: #f4a261;
+    &:hover{
+        color: #fa7203;
+    }
+}
+
+
+
+
+
