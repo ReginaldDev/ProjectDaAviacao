@@ -85,7 +85,23 @@
         </section>
         <section id="galeria">
             <h2>Galeria</h2>
-            <p>Confira fotos e vídeos de nossos motores em ação...</p>
+            <p>Confira fotos de nossos serviços.</p>
+            <div class="galeria-container">
+                <img src="src/image/aviao1.jpg" alt="Imagem 1" onclick="expandirImagem(this)">
+                <img src="src/image/aviao2.jpg" alt="Imagem 2" onclick="expandirImagem(this)">
+                <img src="src/image/aviao3.jpg" alt="Imagem 3" onclick="expandirImagem(this)">
+                <img src="src/image/aviao4.jpg" alt="Imagem 4" onclick="expandirImagem(this)">
+                <img src="src/image/aviao5.jpg" alt="Imagem 5" onclick="expandirImagem(this)">
+                <img src="src/image/aviao6.jpg" alt="Imagem 6" onclick="expandirImagem(this)">
+            </div>
+        
+            <a href="galeria.html" class="galeria-link">Ver galeria completa</a> 
+            
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="fecharLightbox()">&times;</span>
+                <img class="lightbox-img" id="lightbox-img">
+            </div>
         </section>
         <section id="contato">
             <h2>Produtos</h2>
